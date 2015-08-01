@@ -1,0 +1,25 @@
+
+<div class="input-control text" data-role="input-control">
+    <input type="text" ng-model="time" ng-click="fechaFrame()" ng-keyup="inserirMascara()">
+    <button class="button" ng-click="abreFrame()"><span class="mif-hour-glass"></span></button>
+    <div class="frame" ng-show="mostraFrame" style="border:thin solid; width: 210px">
+        <div class="row cells3">
+            <div class="cell">
+                <span class="mif-expand-less mif-2x fg-darkBlue" style="cursor: pointer" ng-click="maisHoras()"></span>
+                <span class="mif-expand-more mif-2x fg-darkBlue" style="cursor: pointer" ng-click="menosHoras()"></span>
+            </div>
+            <div class="cell padding20 no-padding-left no-padding-right">
+
+                    <label ng-minlength="2">{{hora | counterValue}}</label>&nbsp;:
+
+
+                    <label ng-minlength="2">{{minutos | counterValue}}</label>
+
+            </div>
+        <div class="cell">
+            <span class="mif-expand-less mif-2x fg-darkBlue" style="cursor: pointer" ng-click="maisMinutos()"></span>
+            <span class="mif-expand-more mif-2x fg-darkBlue" style="cursor: pointer" ng-click="menosMinutos()"></span>
+        </div>
+        </div>
+    </div>
+</div>
